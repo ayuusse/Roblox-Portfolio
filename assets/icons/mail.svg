@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="128" height="128" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="color: rgb(217, 75, 46);" data-vcid="vcjvs5rfz"><defs/><style data-vc="1">svg[data-vcid="vcjvs5rfz"] {color:#d94b2e!important}
+svg[data-vcid="vcjvs5rfz"] [fill]:not([fill="none"]):not([fill="transparent"]):not([fill^="url"]):not([data-background]):not([data-mvar-background]),svg[data-vcid="vcjvs5rfz"] [style*="fill"]:not([style*="fill:none"]):not([style*="fill: none"]):not([style*="fill:transparent"]):not([style*="fill: transparent"]):not([style*="fill:url"]):not([style*="fill: url"]):not([data-background]):not([data-mvar-background]){fill:#d94b2e!important}
+svg[data-vcid="vcjvs5rfz"] [stroke]:not([stroke="none"]):not([stroke^="url"]):not([data-background]):not([data-mvar-background]),svg[data-vcid="vcjvs5rfz"] [style*="stroke"]:not([style*="stroke:none"]):not([style*="stroke: none"]):not([style*="stroke:url"]):not([style*="stroke: url"]):not([data-background]):not([data-mvar-background]){stroke:#d94b2e!important}</style>
+    
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mail">
+            <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24">
+
+</rect>
+            <rect id="Rectangle" stroke="#d94b2e" stroke-width="2" stroke-linecap="round" x="4" y="5" width="16" height="14" rx="2">
+
+</rect>
+            <path d="M20,7 L12.3,12.775 C12.1222,12.9083 11.8778,12.9083 11.7,12.775 L4,7" id="Path" stroke="#d94b2e" stroke-width="2" stroke-linecap="round">
+
+</path>
+        </g>
+    </g>
+</svg>

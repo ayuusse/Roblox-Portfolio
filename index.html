@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ayuusse — Roblox Game Developer portfolio.">
+  <title>Roblox Portfolio</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== Navigation ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <img src="assets/icons/house.svg" alt="" class="logo__icon" width="24" height="24">
+        <span class="logo__text">Home</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== Hero ==================== -->
+    <section id="hero" class="hero section">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <p class="hero__greeting">Hi, I'm</p>
+          <h1 class="hero__title">Ayuusse</h1>
+          <p class="hero__subtitle">CS student into Roblox development</p>
+          <p class="hero__description">
+             I handle the heavy lifting behind the scenes—building solid backend architecture, solving complex debugging problems, and scaling math-heavy systems.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--outline">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero__profile">
+
+          <div class="hero__profile-placeholder" aria-hidden="true">
+            <img src="assets\images\profile.png" alt="Profile photo of Ayuusse">
+          </div>
+        </div>
+      </div>
+      <!-- Subtle background decoration -->
+      <div class="hero__decor" aria-hidden="true"></div>
+    </section>
+
+    <!-- ==================== About ==================== -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <div class="about__grid">
+          <div class="about__text">
+
+            <p>
+              I'm a computer science student and Roblox developer focusing on what goes on under the hood. I skip the surface-level design to specialize in <strong>Luau scripting</strong>, <strong>backend architecture</strong>, and optimizing the core systems that keep games running smoothly.
+            </p>
+            <p>
+              My passion lies in math-heavy systems and incremental games. I thrive on solving annoying debugging problems, designing complex progression scaling, and writing highly performant, modular code. 
+            </p>
+            <p>
+              <strong>How I Work & Availability:</strong><br>
+              I always  "plan first, then only execute" this way I deliver incredibly clean, high-quality systems on tight deadlines. Because I am managing my university degree, I prefer <strong>pay-per-task jobs</strong> within stable, long-term projects that I can contribute to for a few hours every day.
+            </p>    
+
+          </div>
+          <div class="about__sidebar">
+            <div class="about__stat">
+              <span class="about__stat-number">3+</span>
+              <span class="about__stat-label">Years Building</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">Open</span>
+              <span class="about__stat-label">To Work</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">CS</span>
+              <span class="about__stat-label">Student</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Projects ==================== -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <h2 class="section__title">Featured Projects</h2>
+        <p class="section__subtitle">Few of the latest projects i've been working on.</p>
+        <div class="projects__grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== Skills ==================== -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <h2 class="section__title">Skills &amp; Services</h2>
+        <p class="section__subtitle">You can hire me for the following.</p>
+
+        <div class="skills__grid">
+
+          <div class="skill-card">
+            <img src="assets/icons/code.svg" alt="" class="skill-card__icon" width="24" height="24">
+            <h3 class="skill-card__title">Luau Scripting</h3>
+            <p class="skill-card__description">Clean, modular, and performant scripts. From combat systems to data persistence and admin panels.</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="assets/icons/gamepad.svg" alt="" class="skill-card__icon" width="24" height="24">
+            <h3 class="skill-card__title">Game Design</h3>
+            <p class="skill-card__description">Balanced progression curves, engaging loops, and fun mechanics that keep players coming back.</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="assets/icons/monitor.svg" alt="" class="skill-card__icon" width="24" height="24">
+            <h3 class="skill-card__title">UI / UX Design</h3>
+            <p class="skill-card__description">Intuitive, accessible interfaces and polished menus using modern UI design principles.</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="assets/icons/zap.svg" alt="" class="skill-card__icon" width="24" height="24">
+            <h3 class="skill-card__title">Optimisation</h3>
+            <p class="skill-card__description">Memory management, streaming, and LOD techniques to ensure smooth performance on all devices.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Contact ==================== -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 class="section__title">Get In Touch</h2>
+        <p class="section__subtitle">Have a project in mind or just want to say hi? Reach out through any of the channels below.</p>
+
+        <div class="contact__links">
+          <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=ayuusses@gmail.com" class="contact__link" target="_blank" rel="noopener noreferrer">
+          <img src="assets/icons/mail.svg" alt="" class="contact__link-icon" width="20" height="20">
+          <span class="contact__link-label">Email: ayuusses@gmail.com</span>
+          <span class="contact__link-value"></span>
+          </a>  
+          <a href="https://discord.com/users/738659639909941259" class="contact__link" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/discord.svg" alt="" class="contact__link-icon" width="20" height="20">
+            <span class="contact__link-label">Discord: @ayuusse</span>
+            <span class="contact__link-value"></span>
+          </a>
+          <a href="https://github.com/ayuusse" class="contact__link" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/github.svg" alt="" class="contact__link-icon" width="20" height="20">
+            <span class="contact__link-label">GitHub: @ayuusse</span>
+            <span class="contact__link-value"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer">
+    <div class="container footer__container">
+      <p class="footer__copy">&copy; <span id="footer-year"></span> Ayuusse.</p>
+      <a href="#hero" class="footer__top-link" aria-label="Back to top">&uarr; Top</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/video-modal.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
