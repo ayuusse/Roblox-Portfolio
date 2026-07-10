@@ -3,6 +3,7 @@ var VideoModal = (function () {
   var overlay = null;
   var modal = null;
   var video = null;
+  var source = null;
   var closeBtn = null;
   var isOpen = false;
 
@@ -33,6 +34,8 @@ var VideoModal = (function () {
     video.preload = 'none';
     video.playsInline = true;
 
+    source = document.createElement('source');
+    video.appendChild(source);
     wrapper.appendChild(video);
     modal.appendChild(closeBtn);
     modal.appendChild(wrapper);
@@ -52,7 +55,8 @@ var VideoModal = (function () {
 
   function open(src, title, poster) {
     init();
-    video.src = src;
+    source.src = src;
+    source.type = 'video/mp4';
     if (poster) video.poster = poster;
     if (title) {
       modal.setAttribute('aria-label', 'Video: ' + title);
@@ -68,7 +72,7 @@ var VideoModal = (function () {
   function close() {
     if (!isOpen) return;
     video.pause();
-    video.removeAttribute('src');
+    source.removeAttribute('src');
     video.load();
     overlay.classList.remove('is-open');
     overlay.setAttribute('aria-hidden', 'true');

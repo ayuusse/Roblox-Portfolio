@@ -5,16 +5,16 @@ var Projects = (function () {
       description: 'A solo development project created as a passion project merging traditional obby gameplay with incremental progression systems.',
       built: 'June 2026',
       videoSrc: 'assets/videos/inf-obby-inc.mp4',
-      thumbnailSrc: 'assets/images/inf-obby-inc.png',
-      posterSrc: 'assets/images/inf-obby-inc.png'
+      thumbnailSrc: 'assets/images/inf-obby-inc.jpg',
+      posterSrc: 'assets/images/inf-obby-inc.jpg'
     },
     {
       title: 'Rolling System + Inventory system ',
       description: 'A flexible chance-based rolling system linked directly to an organized inventory. Designed with easy-to-update item tables and ID tracking for straightforward data management.',
       built: 'July 2026',
       videoSrc: 'assets/videos/rolling-system.mp4',
-      thumbnailSrc: 'assets/images/rolling-system.png',
-      posterSrc: 'assets/images/rolling-system.png'
+      thumbnailSrc: 'assets/images/rolling-system.jpg',
+      posterSrc: 'assets/images/rolling-system.jpg'
     },
     {
       title: 'Meccha Chameleon Painting System',
@@ -29,8 +29,8 @@ var Projects = (function () {
       description: 'A clean and fully modular character selection window. Built with flexible systems to allow for easy setup and smooth integration into any project.',
       built: 'July 2026',
       videoSrc: 'assets/videos/character-selection.mp4',
-      thumbnailSrc: 'assets/images/character-selection.png',
-      posterSrc: 'assets/images/character-selection.png'
+      thumbnailSrc: 'assets/images/character-selection.jpg',
+      posterSrc: 'assets/images/character-selection.jpg'
     },
   ];
 
