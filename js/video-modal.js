@@ -30,7 +30,8 @@ var VideoModal = (function () {
     video = document.createElement('video');
     video.className = 'video-modal__video';
     video.controls = true;
-    video.preload = 'metadata';
+    video.preload = 'none';
+    video.playsInline = true;
 
     wrapper.appendChild(video);
     modal.appendChild(closeBtn);
@@ -49,9 +50,10 @@ var VideoModal = (function () {
     });
   }
 
-  function open(src, title) {
+  function open(src, title, poster) {
     init();
     video.src = src;
+    if (poster) video.poster = poster;
     if (title) {
       modal.setAttribute('aria-label', 'Video: ' + title);
     }

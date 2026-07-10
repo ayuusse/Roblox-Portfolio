@@ -4,29 +4,33 @@ var Projects = (function () {
       title: 'Infinite Obby Incremental',
       description: 'A solo development project created as a passion project merging traditional obby gameplay with incremental progression systems.',
       built: 'June 2026',
-      videoSrc: 'assets/videos/Inf Obby Inc.mp4',
-      thumbnailSrc: 'assets/images/Inf Obby Inc.png'
+      videoSrc: 'assets/videos/inf-obby-inc.mp4',
+      thumbnailSrc: 'assets/images/inf-obby-inc.png',
+      posterSrc: 'assets/images/inf-obby-inc.png'
     },
     {
       title: 'Rolling System + Inventory system ',
       description: 'A flexible chance-based rolling system linked directly to an organized inventory. Designed with easy-to-update item tables and ID tracking for straightforward data management.',
       built: 'July 2026',
-      videoSrc: 'assets/videos/Rolling System.mp4',
-      thumbnailSrc: 'assets/images/Rolling System.png'
+      videoSrc: 'assets/videos/rolling-system.mp4',
+      thumbnailSrc: 'assets/images/rolling-system.png',
+      posterSrc: 'assets/images/rolling-system.png'
     },
     {
       title: 'Meccha Chameleon Painting System',
       description: 'Made a clean and functional painting system based on the Meccha Chameleon style.',
       built: 'July 2026',
-      videoSrc: 'assets/videos/Basic meccha chameleon.mp4',
-      thumbnailSrc: 'assets/images/Basic meccha chameleon.jpg'
+      videoSrc: 'assets/videos/basic-meccha-chameleon.mp4',
+      thumbnailSrc: 'assets/images/basic-meccha-chameleon.jpg',
+      posterSrc: 'assets/images/basic-meccha-chameleon.jpg'
     },
     {
       title: 'Character Selction window',
       description: 'A clean and fully modular character selection window. Built with flexible systems to allow for easy setup and smooth integration into any project.',
       built: 'July 2026',
-      videoSrc: 'assets/videos/Character Selection.mp4',
-      thumbnailSrc: 'assets/images/Character Selection.png'
+      videoSrc: 'assets/videos/character-selection.mp4',
+      thumbnailSrc: 'assets/images/character-selection.png',
+      posterSrc: 'assets/images/character-selection.png'
     },
   ];
 
@@ -57,6 +61,9 @@ var Projects = (function () {
       img.src = project.thumbnailSrc;
       img.alt = project.title + ' screenshot';
       img.loading = 'lazy';
+      img.decoding = 'async';
+      img.width = 400;
+      img.height = 225;
       imageDiv.appendChild(img);
     } else {
       var placeholder = document.createElement('span');
@@ -68,7 +75,7 @@ var Projects = (function () {
     var openVideo = function (e) {
       e.preventDefault();
       if (modal && typeof modal.open === 'function') {
-        modal.open(project.videoSrc, project.title);
+        modal.open(project.videoSrc, project.title, project.posterSrc);
       }
     };
 
