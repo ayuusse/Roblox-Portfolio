@@ -4,44 +4,39 @@ var Projects = (function () {
       title: 'Infinite Obby Incremental',
       description: 'A solo development project created as a passion project merging traditional obby gameplay with incremental progression systems.',
       built: 'June 2026',
-      videoSrc: 'assets/videos/inf-obby-inc.mp4',
-      thumbnailSrc: 'assets/images/inf-obby-inc.jpg',
-      posterSrc: 'assets/images/inf-obby-inc.jpg'
+      youtubeId: 'Lvt8b_YmhKc',
+      thumbnailSrc: 'assets/images/inf-obby-inc.jpg'
     },
     {
-      title: 'Rolling System + Inventory system ',
+      title: 'Rolling System + Inventory system',
       description: 'A flexible chance-based rolling system linked directly to an organized inventory. Designed with easy-to-update item tables and ID tracking for straightforward data management.',
       built: 'July 2026',
-      videoSrc: 'assets/videos/rolling-system.mp4',
-      thumbnailSrc: 'assets/images/rolling-system.jpg',
-      posterSrc: 'assets/images/rolling-system.jpg'
+      youtubeId: '5eoFDl0Pn7k',
+      thumbnailSrc: 'assets/images/rolling-system.jpg'
     },
     {
       title: 'Meccha Chameleon Painting System',
       description: 'Made a clean and functional painting system based on the Meccha Chameleon style.',
       built: 'July 2026',
-      videoSrc: 'assets/videos/basic-meccha-chameleon.mp4',
-      thumbnailSrc: 'assets/images/basic-meccha-chameleon.jpg',
-      posterSrc: 'assets/images/basic-meccha-chameleon.jpg'
+      youtubeId: 'mg2RCpDoFNk',
+      thumbnailSrc: 'assets/images/basic-meccha-chameleon.jpg'
     },
     {
       title: 'Character Selction window',
       description: 'A clean and fully modular character selection window. Built with flexible systems to allow for easy setup and smooth integration into any project.',
       built: 'July 2026',
-      videoSrc: 'assets/videos/character-selection.mp4',
-      thumbnailSrc: 'assets/images/character-selection.jpg',
-      posterSrc: 'assets/images/character-selection.jpg'
+      youtubeId: '1VSLq4elTZ4',
+      thumbnailSrc: 'assets/images/character-selection.jpg'
     },
   ];
 
-  
-  function initProjects(modalInstance) {
+  function initProjects(player) {
     var grid = document.getElementById('projects-grid');
     if (!grid) return [];
 
     var cards = [];
-    projectsData.forEach(function (project, index) {
-      var card = createCard(project, modalInstance);
+    projectsData.forEach(function (project) {
+      var card = createCard(project, player);
       grid.appendChild(card);
       cards.push(card);
     });
@@ -49,37 +44,28 @@ var Projects = (function () {
     return cards;
   }
 
-  function createCard(project, modal) {
+  function createCard(project, player) {
     var article = document.createElement('article');
     article.className = 'project-card';
 
     var imageDiv = document.createElement('div');
     imageDiv.className = 'project-card__image';
 
-    if (project.thumbnailSrc) {
-      var img = document.createElement('img');
-      img.src = project.thumbnailSrc;
-      img.alt = project.title + ' screenshot';
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      img.width = 400;
-      img.height = 225;
-      imageDiv.appendChild(img);
-    } else {
-      var placeholder = document.createElement('span');
-      placeholder.className = 'project-card__placeholder';
-      placeholder.textContent = 'Project Screenshot';
-      imageDiv.appendChild(placeholder);
-    }
+    var img = document.createElement('img');
+    img.src = project.thumbnailSrc;
+    img.alt = project.title + ' screenshot';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.width = 400;
+    img.height = 225;
+    imageDiv.appendChild(img);
 
-    var openVideo = function (e) {
+    imageDiv.addEventListener('click', function (e) {
       e.preventDefault();
-      if (modal && typeof modal.open === 'function') {
-        modal.open(project.videoSrc, project.title, project.posterSrc);
+      if (player && typeof player.open === 'function') {
+        player.open(project.youtubeId, project.title);
       }
-    };
-
-    imageDiv.addEventListener('click', openVideo);
+    });
     imageDiv.style.cursor = 'pointer';
 
     article.appendChild(imageDiv);
@@ -112,7 +98,12 @@ var Projects = (function () {
     link.href = '#';
     link.className = 'project-link';
     link.textContent = 'Watch Video →';
-    link.addEventListener('click', openVideo);
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (player && typeof player.open === 'function') {
+        player.open(project.youtubeId, project.title);
+      }
+    });
     linksDiv.appendChild(link);
 
     content.appendChild(linksDiv);
@@ -121,12 +112,5 @@ var Projects = (function () {
     return article;
   }
 
-  function setData(data) {
-    projectsData = data;
-  }
-
-  return {
-    init: initProjects,
-    setData: setData
-  };
+  return { init: initProjects };
 })();

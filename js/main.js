@@ -115,12 +115,11 @@ document.addEventListener('DOMContentLoaded', function () {
   if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
   }
-  var projectCards = Projects.init(VideoModal);
+  Projects.init(YTPlayer);
 
-  // Observe dynamically added project cards for scroll-reveal
-  projectCards.forEach(function (card) {
+  document.querySelectorAll('.project-card').forEach(function (card) {
     card.classList.add('reveal');
-    if (window.IntersectionObserver && observer) {
+    if (window.IntersectionObserver) {
       observer.observe(card);
     } else {
       card.style.opacity = '1';
